@@ -422,8 +422,8 @@ img {vertical-align: middle;}
 
 .closeBtn {
     margin-top: 15px;
-    padding: 5px 25px;
-    font-size: 24px;
+    padding: 5px 19px;
+    font-size: 15px;
     text-align: center;
     cursor: pointer;
     outline: none;
@@ -431,7 +431,7 @@ img {vertical-align: middle;}
     background-color: #e0dac6;
     border: none;
     border-radius: 15px;
-    box-shadow: 0 9px #4c5048;
+    box-shadow: 0 5px #4c5048;
 }
   
 .closeBtn:hover {background-color: #e0dac6}
@@ -452,12 +452,12 @@ img {vertical-align: middle;}
     float: left;
     margin-right: 15px;
     border-radius: 100vw;
-    border: 10px solid #8da57c;
+    border: 3px solid #8da57c;
     transition: all .4s ease;
     -webkit-transition: all .4s ease;
 }
 .familyMemberPic:hover {
-    border: 3px solid red;
+    border: 5px solid red;
 }
 .familyMemberDtl{
     font-size: 1vw;
@@ -483,17 +483,17 @@ img {vertical-align: middle;}
     margin-right: 20px;
 }
 .angelPic{
-    border: 10px solid #d055aa;
+    border: 3px solid #d055aa;
     float: right;
     margin-left: 20px;
 }
 .bridePic{
-    border: 10px solid #f3ff37;
+    border: 3px solid #f3ff37;
     float: left;
     margin-right: 20px;
 }
 .relationshipPic{
-    border: 10px solid #2c819a;
+    border: 3px solid #2c819a;
     float: left;
     margin-right: 20px;
 }
@@ -743,7 +743,7 @@ img {vertical-align: middle;}
     height: 100%;
 }
 .aboveClock{
-    border: 10px solid transparent;
+    /*border: 10px solid transparent;*/
     padding: 1px;
     -webkit-border-image: url(border.png) 30 stretch;
     -o-border-image: url(border.png) 30 stretch;
@@ -752,6 +752,7 @@ img {vertical-align: middle;}
 .heartBackground{
     display: block;
     margin: 0px auto;
+    margin-left: 15vw;
     height:20px;
     opacity: 0;
     width:20px;
@@ -786,7 +787,10 @@ img {vertical-align: middle;}
 .heartText>h4{
     font-family: 'Dosis', sans-serif;
 }
-
+.weddintDateHeader{
+    font-size: 9px;
+    margin: 0;
+}
 /** snackbar **/
 #snackbar {
     visibility: hidden;
@@ -830,6 +834,17 @@ img {vertical-align: middle;}
     to {bottom: 0; opacity: 0;}
   }
 /** snackbar **/
+.openLeft{
+    top: 25%;
+    right: 5%;
+    position: absolute;
+}
+.openRight{
+    top: 25%;
+    left: 5%;
+    position: absolute;
+}
+
 
 
 /* Safari 4.0 - 8.0 */

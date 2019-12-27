@@ -13,32 +13,39 @@ firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 
 /* snackbar & fireBase */
-var messageRef = firebase.database().ref('messages');
+var invitationListRef = firebase.database().ref('invitationList');
 function submitForm() {
+  var name = $('#name').val();
+  if(name){
+    saveMessages();
+    var x = document.getElementById("snackbar");
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+    $('#name').val(null); $('#contactNo').val(' '); $('#emailId').val(' '); $('#message').val(null); $( "#guest" ).val('1');
+  }
+}
+
+function saveMessages(){
   var name = $('#name').val();
   var contact = $('#contactNo').val();
   var email = $('#emailId').val();
   var message = $('#message').val();
   var guest = $( "#guest" ).val();
-  console.log(name+"/"+contact+"/"+email+"/"+message+"/"+guest);
-  saveMessages(name,contact,email,message,guest);
-
-  var x = document.getElementById("snackbar");
-  x.className = "show";
-  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
-
-  $('#name').val(null); $('#contactNo').val(' '); $('#emailId').val(' '); $('#message').val(null); $( "#guest" ).val('1');
-}
-
-function saveMessages(name,contact,email,message,guest){
-  var newMessage = messageRef.push();
-  newMessage.set({
-    name:name,
-    contact:contact,
-    email:email,
-    message:message,
-    guest:guest
-  })
+  var WedddingAtend = $( "#WedddingAtend" ).is(':checked');
+  var ReceptionAtend = $( "#ReceptionAtend" ).is(':checked');
+  //console.log(name+"/"+contact+"/"+email+"/"+message+"/"+guest);
+    var nodeName = name+"-"+contact ;
+    var newMessage = invitationListRef.child(nodeName);
+    newMessage.set({
+      name:name,
+      contact:contact,
+      email:email,
+      message:message,
+      guest:guest,
+      attendWeddding:WedddingAtend,
+      attendReception:ReceptionAtend
+    });
+    $(".SendForm").addClass("hide");
 }
 /* snackbar & fireBase */
 
