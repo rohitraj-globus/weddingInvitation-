@@ -1,9 +1,7 @@
-# Employee Directory App using Node, Express, MongoDB and AngularJS.
+# Vilas wedding Invitation App using Node, Express and firebase.
 
-# The application have all four CRUD (Create, Read, Update, Delete) operation. 
+# This application have two of the four CRUD (Create,Update) operation. 
 
-# User should be able to add new employees, edit an employee details, delete an employee record.
+# User should fill the form for attending marriage or not.
 
-# I have used Angular’s $http service to make request to REST API build using Node, Express and MongoDB.
-
-# Created by Rohit Raj on 26th March 2016.
+# Created by Rohit Raj on 29th Dec 2019.
