@@ -1,12 +1,12 @@
 var firebaseConfig = {
-  apiKey: "AIzaSyDabsnLsmIYbJI3TSwV7AELUWiEvW8-KUI",
-  authDomain: "weddinginvitationlist-ba3f1.firebaseapp.com",
-  databaseURL: "https://weddinginvitationlist-ba3f1.firebaseio.com",
-  projectId: "weddinginvitationlist-ba3f1",
-  storageBucket: "weddinginvitationlist-ba3f1.appspot.com",
-  messagingSenderId: "666444388099",
-  appId: "1:666444388099:web:e2f0d8d7c43655dd5d7b36",
-  measurementId: "G-87X74L29SN"
+  apiKey: "AIzaSyCvbVPPB0jgUfvix03_7BGHfQMLQFl1-qU",
+  authDomain: "myweddinginvitationlist.firebaseapp.com",
+  databaseURL: "https://myweddinginvitationlist.firebaseio.com",
+  projectId: "myweddinginvitationlist",
+  storageBucket: "myweddinginvitationlist.appspot.com",
+  messagingSenderId: "270128906205",
+  appId: "1:270128906205:web:c2a86abd33e59d53c88034",
+  measurementId: "G-SLJW5D899S"
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
@@ -22,6 +22,10 @@ function submitForm() {
     x.className = "show";
     setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
     $('#name').val(null); $('#contactNo').val(' '); $('#emailId').val(' '); $('#message').val(null); $( "#guest" ).val('1');
+  }else{
+    var x = document.getElementById("snackbarId");
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
   }
 }
 
@@ -174,22 +178,22 @@ function openCurtainEffect(family) {
   $(".cover-left").css("left","-50%");
   $(".cover-right").css("right","-50%");
   if(family==="bridesmaides"){
-    $(".bridesmaidesFamily").removeClass("hide");
-    //$("#groomsmen").addClass("hide");
+    $(".bridesmaidesShe").removeClass("hide");
+    $(".groomsmenHe").addClass("hide");
   }else{
-    $(".groomsmenFamily").removeClass("hide");
-    //$("#rr_navigation").addClass("hide");
+    $(".groomsmenHe").removeClass("hide");
+    $(".bridesmaidesShe").addClass("hide");
   }
 }
 
 function closeFamily(family) {
   $(".cover-left").css("left","0px");
   $(".cover-right").css("right","0px");
-  if(family==="bridesmaides"){
+  /*if(family==="bridesmaides"){
     $(".bridesmaidesFamily").addClass("hide");
   }else{
     $(".groomsmenFamily").addClass("hide");
-  }
+  }*/
 }
 
 setTimeout(function(){ window.scrollTo(0, 0); }, 700);

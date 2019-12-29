@@ -333,7 +333,7 @@ img {vertical-align: middle;}
     text-transform: none;
 }
 #bridal-party{
-    height: 500px;
+    height: 300px;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -397,12 +397,12 @@ img {vertical-align: middle;}
 }
 .heading-meet-the-bridesmaides>p{
     margin: 0;
-    transform: rotate(-20deg);
+    transform: rotate(-15deg);
 }
 .heading-meet-the-groomsmen>p {
     margin: 0;
     color: #fff;
-    transform: rotate(20deg);
+    transform: rotate(15deg);
 }
 .heading-meet-the-bridesmaides:hover , .heading-meet-the-groomsmen:hover {
     top: 48%;
@@ -421,7 +421,7 @@ img {vertical-align: middle;}
 }
 
 .closeBtn {
-    margin-top: 15px;
+    margin: 15px;
     padding: 5px 19px;
     font-size: 15px;
     text-align: center;
@@ -431,7 +431,7 @@ img {vertical-align: middle;}
     background-color: #e0dac6;
     border: none;
     border-radius: 15px;
-    box-shadow: 0 5px #4c5048;
+    box-shadow: 0 5px #5a5a5a;
 }
   
 .closeBtn:hover {background-color: #e0dac6}
@@ -537,7 +537,7 @@ img {vertical-align: middle;}
     min-height: 740px;
     background-size: cover;
     background-position: center;
-    background-image: url(../img/selfPic/qqq.jpg);
+    background-image: url(../img/selfPic/rsvpBackground.jpg);
 }
 .rr_rsvpHeading{
     margin: 0;
@@ -738,9 +738,11 @@ img {vertical-align: middle;}
     font-size: 25px;
     font-family: 'Ma Shan Zheng', cursive;
 }
-.bridesmaidesFamily,.groomsmenFamily{
-    overflow-x: scroll;
+.bridesmaidesShe,.groomsmenHe{
     height: 100%;
+    color: #fff;
+    overflow-x: scroll;
+    background-image: url(../img/ourStoryBackground.jpg);
 }
 .aboveClock{
     /*border: 10px solid transparent;*/
@@ -792,7 +794,7 @@ img {vertical-align: middle;}
     margin: 0;
 }
 /** snackbar **/
-#snackbar {
+#snackbar,#snackbarId {
     visibility: hidden;
     min-width: 250px;
     margin-left: -125px;
@@ -808,7 +810,7 @@ img {vertical-align: middle;}
     font-size: 17px;
   }
   
-  #snackbar.show {
+  #snackbar.show,#snackbarId.show{
     visibility: visible;
     -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
     animation: fadein 0.5s, fadeout 0.5s 2.5s;
